@@ -10,13 +10,13 @@ public class Library {
       int []sameArr = roll(4);
         containsDuplicates(sameArr);
         average(sameArr);
-        int[][] tryArr = {
-                {1,1,1,1},
-                {8,8,8,9},
-                {0,1,2,1},
-                {5,5,5,5},
+        int[][] weeklyMonthTemperatures = {
+                {66, 64, 58, 65, 71, 57, 60},
+                {57, 65, 65, 70, 72, 65, 51},
+                {55, 54, 60, 53, 59, 57, 61},
+                {65, 56, 55, 52, 55, 62, 57},
         };
-        lowAverage(tryArr);
+        lowAverage(weeklyMonthTemperatures);
     }
 
     public static int[] roll(int n ) {
@@ -64,8 +64,11 @@ public class Library {
             for (int j = 0; j < arr[i].length ; j++) {
                 oneArrTotal += arr[i][j];
             }
-            double oneAvf = (double)oneArrTotal/arr[i].length;
-            if (oneAvf > lastAvg) {
+            double oneAvg = (double)oneArrTotal/arr[i].length;
+            if (lastAvg == 0) {
+                lastAvg = oneArrTotal;
+            }
+            if (oneAvg < lastAvg) {
                 index = i;
                 lastAvg = oneArrTotal;
             }
