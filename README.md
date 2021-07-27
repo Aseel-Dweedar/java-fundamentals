@@ -4,7 +4,7 @@
 
 ### **1. Basics.**
 
-**methods contained within the repo:**
+**methods contained within the file:**
 
 **Main :**
 
@@ -14,7 +14,7 @@
 
 ### **2. Basicslibrary.**
 
-**methods contained within the repo:**
+**methods contained within the file:**
 
 **Main :**
 
@@ -22,3 +22,13 @@
 - containsDuplicates.
 - average.
 - lowAverage.
+- analyzingWeatherData.
+- tally.
+
+### **3. linter.**
+
+**methods contained within the file:**
+
+**Main :**
+
+- linter.

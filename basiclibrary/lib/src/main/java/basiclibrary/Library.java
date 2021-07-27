@@ -3,24 +3,10 @@
  */
 package basiclibrary;
 
+import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Library {
-    public static void main(String[] args) {
-      int []sameArr = roll(4);
-        System.out.println(" ================================" );
-        containsDuplicates(sameArr);
-        System.out.println(" ================================" );
-        average(sameArr);
-        System.out.println(" ================================" );
-        int[][] weeklyMonthTemperatures = {
-                {65, 56, 55, 52, 55, 62, 57},
-                {57, 65, 65, 70, 72, 65, 80},
-                {66, 64, 58, 65, 71, 57, 50},
-                {66, 80, 58, 70, 71, 57, 50},
-        };
-        lowAverage(weeklyMonthTemperatures);
-    }
 
     public static int[] roll(int n ) {
         int []arrRandom =new int[n];
@@ -77,10 +63,95 @@ public class Library {
                 lastAvg = oneAvg;
             }
         }
-        System.out.println("Final Array ***");
+        System.out.println("*** Final Array ***");
         for (int i = 0; i < arr[index].length; i++) {
             System.out.println(arr[index][i]);
         }
         return arr[index];
+    }
+
+    public static ArrayList<String> analyzingWeatherData(int[][] arr) {
+        ArrayList<String> finalResults = new ArrayList<String>();
+        int max = 0;
+        int min = 0;
+        for (int[] oneArr : arr) {
+            for (int value : oneArr ){
+                if (value > max) {
+                    max = value;
+                }
+                if (min == 0 ){
+                    min = value;
+                } else if (value < min){
+                    min = value;
+                }
+            }
+        }
+//        System.out.println("Maximum temperatures  value : "  + max);
+//        System.out.println("Minimum temperatures  value : "  + min);
+
+        Set<Integer> temperaturesSet = new HashSet<>();
+        for (int[] oneArr : arr) {
+            for (int value : oneArr ){
+                temperaturesSet.add(value);
+            }
+        }
+
+        for (int i = min; i <= max ; i++) {
+            if (!temperaturesSet.contains(i)){
+                finalResults.add("Never saw temperature: "+i);
+             }
+        }
+        return finalResults;
+    }
+
+    public static String tally(List<String> votesArg) {
+        HashMap<String , Integer> electionResult = new HashMap<String , Integer>();
+        for (int i = 0; i < votesArg.size(); i++) {
+            if (!electionResult.containsKey(votesArg.get(i))) {
+                electionResult.put(votesArg.get(i), 1);
+            } else {
+                electionResult.put(votesArg.get(i), electionResult.get(votesArg.get(i))+1);
+            }
+        }
+        String winner ="";
+        int maxValue = 0;
+        for (String  name : electionResult.keySet()) {
+             if (electionResult.get(name) > maxValue ){
+                maxValue = electionResult.get(name);
+                winner = name;
+            }
+        }
+        return winner;
+    }
+
+    public static void main(String[] args) {
+        int[][] weeklyMonthTemperatures = {
+                {66, 64, 58, 65, 71, 57, 60},
+                {57, 65, 65, 70, 72, 65, 51},
+                {55, 54, 60, 53, 59, 57, 61},
+                {65, 56, 55, 52, 55, 62, 57}
+        };
+        List<String> votes = new ArrayList<>();
+        votes.add("Bush");
+        votes.add("Bush");
+        votes.add("Bush");
+        votes.add("Shrub");
+        votes.add("Hedge");
+        votes.add("Shrub");
+        votes.add("Bush");
+        votes.add("Hedge");
+        votes.add("Bush");
+
+        int []sameArr = roll(4);
+        System.out.println(" ================================" );
+        containsDuplicates(sameArr);
+        System.out.println(" ================================" );
+        average(sameArr);
+        System.out.println(" ================================" );
+        lowAverage(weeklyMonthTemperatures);
+        System.out.println(" ================================" );
+        analyzingWeatherData(weeklyMonthTemperatures);
+        System.out.println(" ================================" );
+        tally(votes);
     }
 }
