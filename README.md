@@ -43,3 +43,26 @@
   - if the line ends with an opening .curly brace {.
   - if the line ends with an closing curly brace }.
   - if the line contains if or else.
+
+## 3. inheritance.
+
+### Classes contained within the file:
+
+#### **Restaurant :**
+
+- **_Fields_**: name , stars, price , review.
+
+- **_methods_**:
+  - Restaurant: constructor to assign the name.
+  - setPrice : calculate the price (number of dollar sing).
+  - setStars : calculate rating.
+  - addReview : add the new review to the restaurant and calculate the new rating.
+  - getter methods : to get the values of the restaurant.
+
+#### **Review :**
+
+- **_Fields_**: body , author, numberOfStars.
+
+- **_methods_**:
+  - Review: constructor to assign the values.
+  - getter methods : to get the values of the restaurant.

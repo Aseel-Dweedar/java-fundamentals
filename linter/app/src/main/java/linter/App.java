@@ -15,9 +15,10 @@ public class App {
         String path = "./app/src/main/resources/gates.js";
         linter(path);
     }
-    public static ArrayList<String> linter(String stringPath) {
+    public static ArrayList<String> linter(String filePath) {
         ArrayList<String> finalLines = new ArrayList<String>();
-        Path path = Paths.get(stringPath);
+        Path path = Paths.get(filePath);
+
         try {
             List<String> fileLines = Files.readAllLines(path);
             int lineNumber = 1;
