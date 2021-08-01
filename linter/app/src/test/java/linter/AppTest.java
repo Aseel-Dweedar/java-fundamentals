@@ -15,13 +15,52 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
-    @Test public void testLinter() {
-        String testPath = "./src/test/resources/test.js";
+
+    @Test public void testEmpty(){
+        String testPath = "./src/test/resources/testEmpty.js";
         ArrayList<String> outList = new ArrayList<String>();
-        outList.add("Line 1 : Missing semicolon.");
-        outList.add("Line 5 : Missing semicolon.");
-        outList.add("Line 9 : Missing semicolon.");
-        System.out.println(outList.equals(App.linter(testPath)));
+        assertEquals( outList , App.linter(testPath));
+    }
+
+    @Test public void testFewError(){
+        String testPath = "./src/test/resources/testFewError.js";
+        ArrayList<String> outList = new ArrayList<String>();
+        outList.add("Line 3 : Missing semicolon.");
+        outList.add("Line 6 : Missing semicolon.");
+        outList.add("Line 15 : Missing semicolon.");
+        outList.add("Line 17 : Missing semicolon.");
         assertEquals( outList ,App.linter(testPath));
     }
+
+    @Test public void testManyError(){
+        String testPath = "./src/test/resources/testManyError.js";
+        ArrayList<String> outList = new ArrayList<String>();
+        outList.add("Line 3 : Missing semicolon.");
+        outList.add("Line 4 : Missing semicolon.");
+        outList.add("Line 12 : Missing semicolon.");
+        outList.add("Line 13 : Missing semicolon.");
+        outList.add("Line 17 : Missing semicolon.");
+        outList.add("Line 20 : Missing semicolon.");
+        outList.add("Line 22 : Missing semicolon.");
+        outList.add("Line 24 : Missing semicolon.");
+        outList.add("Line 26 : Missing semicolon.");
+        outList.add("Line 28 : Missing semicolon.");
+        outList.add("Line 30 : Missing semicolon.");
+        outList.add("Line 32 : Missing semicolon.");
+        assertEquals( outList ,App.linter(testPath));
+    }
+
+    @Test public void testNoError(){
+        String testPath = "./src/test/resources/testNoError.js";
+        ArrayList<String> outList = new ArrayList<String>();
+        assertEquals( outList , App.linter(testPath));
+    }
+
+    @Test public void testOneError(){
+        String testPath = "./src/test/resources/testOneError.js";
+        ArrayList<String> outList = new ArrayList<String>();
+        outList.add("Line 1 : Missing semicolon.");
+        assertEquals( outList , App.linter(testPath));
+    }
+
 }
