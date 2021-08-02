@@ -12,7 +12,7 @@ class LibraryTest {
         testRestaurant.setStars(5);
         testRestaurant.setPrice(5);
         String result = "Name: Fire Fly, Total Rate: 5.0, price category: $$$$$, Review: No review added.";
-        assertEquals(result , testRestaurant.toString() );
+        assertEquals(result , testRestaurant.toString());
     }
 
     @Test void testReviewClass() {
@@ -26,7 +26,9 @@ class LibraryTest {
         restaurantWithReview.setStars(2);
         restaurantWithReview.setPrice(5);
         restaurantWithReview.addReview("Normal" , "Ahmed", 2);
-        String result = "Name: Abu Jbarah, Total Rate: 2.0, price category: $$$$$, Review: {Author: Ahmed, body: Normal, Rate: 2}";
+        restaurantWithReview.addReview("Normal" , "Ahmed", 0);
+        restaurantWithReview.addReview("Not Bad" , "Aseel", 3);
+        String result = "Name: Abu Jbarah, Total Rate: 2.33, price category: $$$$$, Review: [{Author: Ahmed, body: Normal, Rate: 2}, {Author: Aseel, body: Not Bad, Rate: 3}]";
         assertEquals(result , restaurantWithReview.toString() );
     }
 }
