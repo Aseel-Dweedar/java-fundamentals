@@ -9,6 +9,11 @@ public class Library {
         firstRes.setStars(3);
         firstRes.setPrice(4);
         firstRes.addReview("Amazing Restaurant" , "Hana", 5);
+        firstRes.addReview("Not Good" , "Aseel", 1);
+        firstRes.addReview("Not Good" , "Aseel", 1);
+        firstRes.addReview("Normal" , "Ahmed", 2);
+//        System.out.println(firstRes.getReview());
+
         System.out.println(firstRes);
     }
 }

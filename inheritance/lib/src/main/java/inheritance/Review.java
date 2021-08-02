@@ -27,6 +27,6 @@ public class Review {
 
     @Override
     public String toString() {
-        return "{Author: " + author + ", body: " + body  + ", Rate: " + numberOfStars + "}";
+        return "{Author: " + author + ", body: " + body  + ", Rate: " + numberOfStars+ "}";
     }
 }
