@@ -48,21 +48,52 @@
 
 ### Classes contained within the file:
 
-#### **Restaurant :**
+#### **Place Class :**
 
-- **_Fields_**: name , stars, price , review.
+- **_Fields_**: name , stars , review.
 
 - **_methods_**:
-  - Restaurant: constructor to assign the name.
-  - setPrice : calculate the price (number of dollar sing).
+  - Place: constructor to assign the name.
   - setStars : calculate rating.
-  - addReview : add the new review to the restaurant and calculate the new rating.
+  - addReview : add a new review and calculate the new rating.
   - getter methods : to get the values of the restaurant.
 
-#### **Review :**
+#### **PriceCategoryPlace Class :**
+
+- **_Fields_**: price.
+
+- **_methods_**:
+  - setPrice : calculate the price (number of dollar sing).
+
+#### **Review Class:**
 
 - **_Fields_**: body , author, numberOfStars.
 
 - **_methods_**:
   - Review: constructor to assign the values.
   - getter methods : to get the values of the restaurant.
+  - toString methods : to return class String.
+
+#### **Restaurant Class :**
+
+- **_methods_**:
+  - toString methods : to return class String.
+
+#### **Shop Class :**
+
+- **_Fields_**: descriptions.
+
+- **_methods_**:
+  - getter and setter method : get and set a values to the descriptions.
+  - toString methods : to return class String.
+
+#### **Theater Class :**
+
+- **_Fields_**: moviesList.
+
+- **_methods_**:
+  - addMovie : check if movie is not already exist if not add it to movies list.
+  - removeMovie : remove movie from moviesList.
+  - getter : get the values of moviesList.
+  - addMovieWithReview : add a new review that contains movie people saw and calculate the new rating.
+  - toString methods : to return class String.

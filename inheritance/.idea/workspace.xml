@@ -5,14 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b0ba8966-69d5-40e2-b965-9bc8991ad59e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/src/main/java/inheritance/Place.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/main/java/inheritance/PriceCategoryPlace.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/main/java/inheritance/Shop.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/main/java/inheritance/Theater.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/main/java/inheritance/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/inheritance/Library.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/main/java/inheritance/Restaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/inheritance/Restaurant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/test/java/inheritance/LibraryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/test/java/inheritance/LibraryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +17,16 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view />
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
